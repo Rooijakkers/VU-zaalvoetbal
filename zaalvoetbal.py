@@ -36,7 +36,7 @@ def parse_date(string):
 
 
 def create_event(home_team, away_team, referee, location, start_time, date):
-    if referee == team_name:
+    if referee[0:min(len(referee), 17)] == team_name[0:min(len(team_name), 17)]:
         title = f"Fluiten: {home_team} - {away_team}"
     else:
         title = f"Wedstrijd: {home_team} - {away_team}"
